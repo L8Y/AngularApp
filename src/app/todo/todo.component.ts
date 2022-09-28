@@ -13,7 +13,7 @@ export class TodoComponent implements OnInit {
 
   task?: ToDo[];
   constructor(private _taskDataService: TaskDataService) {
-    _taskDataService.getdata().subscribe(data => console.log(data))
+    this.task = _taskDataService.getTask();
   }
 
   ngOnInit(): void {

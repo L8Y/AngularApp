@@ -6,10 +6,19 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class TaskDataService {
-  constructor(private obj: HttpClient) {
-
-  }
   toDo?: ToDo[];
+  constructor(private obj: HttpClient) {
+    this.toDo = [
+      {
+        TaskName: "hi",
+        isCompleted: false
+      },
+      {
+        TaskName: "click me",
+        isCompleted: true
+      }
+    ]
+  }
 
   getApp(): string {
     return "Hello world";
