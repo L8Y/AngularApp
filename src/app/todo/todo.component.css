@@ -1,0 +1,31 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.task-display {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.button {
+    height: 2rem;
+    margin-left: 1rem;
+    background-color: black;
+    color: wheat;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.task-name-done {
+    stroke: black;
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+.task-name-notDone {
+    cursor: pointer;
+}

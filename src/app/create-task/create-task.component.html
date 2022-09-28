@@ -1,0 +1,7 @@
+<div class="input-group">
+    <form (submit)="addTask()">
+        <input class="task-input" name="taskName" [(ngModel)]="taskName" type="text" id="taskNameInput"
+            placeholder="Task Name" />
+        <input type="submit" value="Add Task" class="button" />
+    </form>
+</div>

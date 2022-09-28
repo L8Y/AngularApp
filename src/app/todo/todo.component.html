@@ -1,0 +1,9 @@
+<app-create-task></app-create-task>
+<div class="tasks">
+    <div class="task-display" *ngFor="let task of task let i = index">
+        <div (click)="toggle(i)" class="{{(task.isCompleted?'task-name-done':'task-name-notDone')}}">
+            <h2>{{ task.TaskName }}</h2>
+        </div>
+        <button class="button" (click)="removeTask(i)">Remove</button>
+    </div>
+</div>
