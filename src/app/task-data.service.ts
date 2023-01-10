@@ -30,5 +30,4 @@ export class TaskDataService {
   getdata() {
     return this.obj.get("https://api.quotable.io/random");
   }
-
 }

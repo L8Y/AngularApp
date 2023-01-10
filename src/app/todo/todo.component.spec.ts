@@ -8,6 +8,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 describe('TodoComponent', () => {
   let component: TodoComponent;
   let fixture: ComponentFixture<TodoComponent>;
+  let service: jasmine.SpyObj<TaskDataService>
+
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -16,8 +18,7 @@ describe('TodoComponent', () => {
       ],
       declarations: [TodoComponent],
       providers: [TaskDataService]
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TodoComponent);
     component = fixture.componentInstance;
@@ -28,9 +29,9 @@ describe('TodoComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('toggle'), () => {
+  it("toggle task", () => {
+    const service = fixture.debugElement.injector.get(TaskDataService);
+    component.toggle(0);
+  })
 
-
-
-  }
 });

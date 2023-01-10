@@ -9,6 +9,7 @@ import { TaskDataService } from '../task-data.service';
 export class CreateTaskComponent implements OnInit {
 
   taskName: string = '';
+  task: string = "a";
   constructor(private _taskDataService: TaskDataService) { }
 
   ngOnInit(): void {
