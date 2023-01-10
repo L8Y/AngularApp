@@ -4,7 +4,7 @@ import { TaskDataService } from '../task-data.service';
 
 import { CreateTaskComponent } from './create-task.component';
 
-fdescribe('CreateTaskComponent', () => {
+describe('CreateTaskComponent', () => {
   let component: CreateTaskComponent;
   let fixture: ComponentFixture<CreateTaskComponent>;
   let service: jasmine.SpyObj<TaskDataService>
@@ -16,8 +16,7 @@ fdescribe('CreateTaskComponent', () => {
       ],
       declarations: [CreateTaskComponent],
       providers: [TaskDataService]
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CreateTaskComponent);
     component = fixture.componentInstance;
@@ -27,4 +26,8 @@ fdescribe('CreateTaskComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("a", () => {
+    expect(component.task).toEqual("a");
+  })
 });
